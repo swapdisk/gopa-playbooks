@@ -1,0 +1,25 @@
+---
+analysis_packages_78:
+  - gopa-modules-rhel8
+  - leapp-upgrade-el7toel8
+  - lvm2-python-boom
+
+analysis_repos_78:
+  - gopa-el7
+  - rhel-7-server-extras-rpms
+
+log_directory: /var/log/gopa
+log_file: "{{ log_directory }}/gopa.log"
+
+leapp_preupg_opts: ''
+
+gopa_preupg_opts: '--force --verbose'
+
+result_filename: /root/preupgrade/result.html
+
+snapshot_data_file: /root/preupgrade/snapshot-data
+
+snapshot_kernel_release_file: /boot/.snapshot-kernel
+
+leapp_upgrade_opts: ''
+

@@ -1,0 +1,2 @@
+log_directory: /var/log/gopa
+log_file: "{{ log_directory }}/gopa.log"

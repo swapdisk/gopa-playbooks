@@ -1,0 +1,16 @@
+---
+- hosts: all
+  strategy: free
+  become: true
+  tasks:
+    - name: Reboot to finish rolling back
+      reboot:
+        msg: 'Host is rolling back now!'
+        post_reboot_delay: 60
+        reboot_timeout: 7200
+
+    - name: Dump facts
+      debug:
+        msg: "analysis-{{ ansible_distribution }}{{ ansible_distribution_major_version }}.yml"
+
+
